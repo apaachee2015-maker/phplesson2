@@ -1,4 +1,10 @@
 <?php
+
+
+require 'funcs.php';
+
+$title = 'My BLog: About';
+
 $post = '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil maiores reprehenderit,
             blanditiis recusandae eveniet aut nisi cum voluptate at possimus dignissimos accusantium 
             praesentium sequi impedit illo repudiandae veniam ullam? Aut?</p>

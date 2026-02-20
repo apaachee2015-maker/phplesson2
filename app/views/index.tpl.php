@@ -4,6 +4,8 @@
                 
                     <div class="row">
 
+<!--                        --><?php //= dd($posts); ?>
+
                             <div class="col-md-8">
                                     <?php foreach ($posts as $post): ?>
                                     <div class="card w-100 mt-2 mb-2">

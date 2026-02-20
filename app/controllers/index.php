@@ -1,4 +1,10 @@
 <?php
+
+
+//require 'funcs.php';
+
+$title = 'My BLog: Homepage';
+
 $posts = [
     '1' => [
         'title' => 'Andrew arrest - live: Kings deepest concern',
@@ -55,4 +61,4 @@ $recent_posts = [
     ],
 ];
 
-require_once 'app/views/index.tpl.php';
+require_once '../app/views/index.tpl.php';
