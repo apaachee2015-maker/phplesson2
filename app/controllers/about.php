@@ -1,7 +1,7 @@
 <?php
 
 
-require 'funcs.php';
+//require CORE . '/funcs.php';
 
 $title = 'My BLog: About';
 
@@ -39,4 +39,4 @@ $recent_posts = [
     ],
 ];
 
-require_once 'app/views/about.tpl.php';
+require_once VIEWS . '/about.tpl.php';
