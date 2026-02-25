@@ -3,8 +3,8 @@
 
 $title = 'My BLog: Homepage';
 
-$posts = $db->query("SELECT * FROM posts ORDER BY id DESC")->fetchAll();
+$posts = $db->query("SELECT * FROM posts ORDER BY id DESC")->findAll();
 
-$recent_posts = $db->query("SELECT * FROM posts ORDER BY id DESC LIMIT 3")->fetchAll();
+$recent_posts = $db->query("SELECT * FROM posts ORDER BY id DESC LIMIT 5")->findAll();
 
 require_once VIEWS . '/index.tpl.php';

@@ -16,27 +16,6 @@ $post = '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil maio
             officiis quasi sed nisi fugit! Deserunt voluptatum alias repellat aliquid!
             </p>';
 
-$recent_posts = [
-    '1' => [
-        'title' => 'An item',
-        'slug' => lcfirst(str_replace(' ', '-', 'An item')),
-    ],
-    '2' => [
-        'title' => 'A second item',
-        'slug' => lcfirst(str_replace(' ', '-', 'A second item')),
-    ],
-    '3' => [
-        'title' => 'A Third item',
-        'slug' => lcfirst(str_replace(' ', '-', 'A Third item')),
-    ],
-    '4' => [
-        'title' => 'A Fourth item',
-        'slug' => lcfirst(str_replace(' ', '-', 'A Fourth item')),
-    ],
-    '5' => [
-        'title' => 'A Fifth item',
-        'slug' => lcfirst(str_replace(' ', '-', 'A Fifth item')),
-    ],
-];
+$recent_posts = $recent_posts = $db->query("SELECT * FROM posts ORDER BY id DESC LIMIT 4")->findAll();
 
 require_once VIEWS . '/about.tpl.php';
