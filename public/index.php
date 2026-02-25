@@ -7,8 +7,7 @@
 
     $db_config = require CONFIG . '/db.php';
     $db = new Db($db_config);
-        dd($db);
-    die;
+
 
     require CORE . '/router.php';
 
