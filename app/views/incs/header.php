@@ -28,7 +28,7 @@
                             <a class="nav-link" href="about">О проекте</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Цены</a>
+                            <a class="nav-link" href="posts/create">Add NewPost</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" aria-disabled="true">Еще что нибудь</a>
