@@ -14,7 +14,7 @@ require VIEWS . '/incs/header.php'; ?>
                             <label id="title" for="title" class="form-label">
                             Post Title
                             </label>
-                            <input id="title" name="title" type="text" class="form-control" placeholder="Post title">
+                            <input id="title" name="title" type="text" class="form-control" placeholder="Post title" value="<?= old('title') ?>">
 
                             <?php if (isset($errors['title'])): ?>
                             <div class="invalid-feedback d-block">
@@ -24,7 +24,7 @@ require VIEWS . '/incs/header.php'; ?>
                         </div>
                         <div class="mb3">
                             <label for="excerpt" class="form-label" id="excerpt">Post Excerpt</label>
-                            <textarea name="excerpt" id="excerpt" class="form-control" rows="3" placeholder="Post excerpt"></textarea>
+                            <textarea name="excerpt" id="excerpt" class="form-control" rows="3" placeholder="Post excerpt"><?= old('excerpt') ?></textarea>
                             <?php if (isset($errors['excerpt'])): ?>
                                 <div class="invalid-feedback d-block">
                                     <?= $errors['excerpt']?>
@@ -34,7 +34,7 @@ require VIEWS . '/incs/header.php'; ?>
 
                         <div class="mb3">
                             <label for="content" class="form-label" id="content">Post Content</label>
-                            <textarea name="content" id="content" class="form-control" rows="5" placeholder="Post content"></textarea>
+                            <textarea name="content" id="content" class="form-control" rows="5" placeholder="Post content"><?= old('content') ?></textarea>
                             <?php if (isset($errors['content'])): ?>
                                 <div class="invalid-feedback d-block">
                                     <?= $errors['content']?>

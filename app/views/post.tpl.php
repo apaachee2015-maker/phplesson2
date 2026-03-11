@@ -6,9 +6,9 @@ require VIEWS . '/incs/header.php'; ?>
             <div class="row">
 
                 <div class="col-md-12">
-                    <?= $post['content']; ?> <br>
+                    <h1> <?= h($post['title']); ?> </h1> <br>
 
-                    <?= $post['excerpt']; ?>
+                    <?= $post['content']; ?>
                 </div>
 
 

@@ -16,19 +16,26 @@ $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
-        if (empty(trim($data['title']))) {
+        if (empty($data['title'])) {
             $errors['title'] = 'The Title is required';
         }
-        if (empty(trim($data['excerpt']))) {
+        if (empty($data['excerpt'])) {
             $errors['excerpt'] = 'The Excerpt is required';
         }
-        if (empty(trim($data['content']))) {
+        if (empty($data['content'])) {
             $errors['content'] = 'The Content is required';
         }
 
             if (empty($errors)){
-                $db->query("INSERT INTO posts (`title`, `excerpt`, `content`) VALUES (?, ?, ?)",
-                    [$_POST['title'], $_POST['excerpt'], $_POST['content']]);
+                if ($db->query("INSERT INTO posts (`title`, `excerpt`, `content`) VALUES (:title, :excerpt, :content)", $data))
+                {
+                    echo 'It is OK!';
+                }else
+                {
+                    echo "Database Error";
+                }
+
+//                redirect('/posts/create');
             }
 
 

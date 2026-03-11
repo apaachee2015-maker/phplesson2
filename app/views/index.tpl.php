@@ -10,7 +10,7 @@
                                     <?php foreach ($posts as $post): ?>
                                     <div class="card w-100 mt-2 mb-2">
                                             <div class="card-body">
-                                                <h5 class="card-title"><a href="post?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h5>
+                                                <h5 class="card-title"><a href="post?id=<?= $post['id'] ?>"><?= h($post['title']) ?></a></h5>
                                                 <p class="card-text"><?= $post['excerpt'] ?></p>
                                                 <a href="post?id=<?= $post['id'] ?>">Read more</a>
                                             </div>

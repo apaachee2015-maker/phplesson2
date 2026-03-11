@@ -48,10 +48,17 @@ class Db
 
 public function query($query, $params = [])
 {
+    try {
     $this->stmt = $this->connection->prepare($query);
     $this->stmt->execute($params);
+    }
+    catch (PDOException $e)
+    {
+        return false;
+    }
     return $this;
 }
+
 public function findAll()
 {
         return $this->stmt->fetchAll();
