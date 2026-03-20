@@ -1,6 +1,8 @@
 <?php
 
 
+require_once CORE . '/classes/Validator.php';
+
 
 /**
 * @var Db $db
@@ -10,8 +12,37 @@ $fillable = ['title','excerpt', 'content'];
 $data = loaddata($fillable);
 
 // validation
+$rules = [
+    'title' => ['required' => true,
+        'min' => 5,
+        'max' => 190,
 
-$errors = [];
+    ],
+    'excerpt' => ['required' => true,
+        'min' => 10,
+        'max' => 190,
+
+    ],
+
+    'content' => ['required' => true,
+        'min' => 10,
+
+    ],
+];
+$validator = new Validator();
+$validation = $validator->validate($data, $rules);
+
+
+
+if ($validation->hasErrors())
+{
+    p_arr($validation->getErrors());
+} else
+{
+    echo 'SUCCESS !';
+}
+
+//die;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {

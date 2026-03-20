@@ -9,6 +9,14 @@ function dump($data)
         "</pre>";
 }
 
+function p_arr($data)
+{
+    echo
+    "</pre>";
+    print_r($data);
+    "</pre>";
+}
+
 function dd($data)
 {
     dump($data);
