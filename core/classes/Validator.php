@@ -16,7 +16,7 @@
         {
 
             foreach ($data as $fieldname => $value) {
-                if (in_array($fieldname, array_keys($rules))) {
+                if (isset($rules[$fieldname])) {
                     $this->check([
                         'fieldname' => $fieldname,
                         'value' => $value,
@@ -58,6 +58,18 @@
         public function hasErrors()
         {
             return !empty($this->errors);
+        }
+
+        public function ListErrors($fieldname) {
+            $output = '';
+            if (isset($this->errors[$fieldname]))
+            {
+                $output = "<div class='invalid-feedback d-block'><ul class='list-unstyled'>";
+                foreach ($this->errors[$fieldname] as $error) {
+                        $output = "<li>{$error}</li>";
+                }
+                $output = "</ul></div>";
+            }
         }
 
         protected function required($value, $rule_value)

@@ -16,11 +16,7 @@ require VIEWS . '/incs/header.php'; ?>
                             </label>
                             <input id="title" name="title" type="text" class="form-control" placeholder="Post title" value="<?= old('title') ?>">
 
-                            <?php if (isset($errors['title'])): ?>
-                            <div class="invalid-feedback d-block">
-                            <?= $errors['title']?>
-                            </div>
-                            <?php endif;?>
+                            <?= isset($validatiion) ?>
                         </div>
                         <div class="mb3">
                             <label for="excerpt" class="form-label" id="excerpt">Post Excerpt</label>
