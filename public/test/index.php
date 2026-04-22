@@ -9,8 +9,9 @@ use classes\test\B;
 
 spl_autoload_register(function ($class){
 
-    var_dump($class);
-    $filename = "{$class}.php";
+//    var_dump($class);
+    $filename = str_replace('\\', DIRECTORY_SEPARATOR, $class) . ".php";
+//    var_dump($filename);
 
     require_once $filename;
 
