@@ -8,7 +8,7 @@ $uri = trim(parse_url($_SERVER['REQUEST_URI'])['path'], '/');
     {
         if (file_exists(CONTROLLERS . "/{$routes[$uri]}"))
         {
-        require CONTROLLERS . "/{$routes[$uri]}";
+        require CONTROLLERS . "/router.php";
         }else
         {
             abort();

@@ -1,10 +1,11 @@
 <?php
 
+phpinfo();
 
 //require_once 'app/A.php';
 //require_once 'classes/A.php';
 
-use classes\A;
+use classes\test\A;
 use classes\test\B;
 
 spl_autoload_register(function ($class){
