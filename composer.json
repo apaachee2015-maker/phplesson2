@@ -4,7 +4,7 @@
   {
     "psr-4":
     {
-      "myframe\\": "vendor/myframe/core/classes"
+      "myframe\\": "app/core/classes/"
 
     }
   },
