@@ -39,4 +39,6 @@
         </nav>
         </div>
 
+        <?php getalerts();?>
+
 

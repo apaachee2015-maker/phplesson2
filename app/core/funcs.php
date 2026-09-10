@@ -63,3 +63,18 @@ function redirect($url = '')
     header("Location: {$redirect}");
     die;
 }
+
+function getalerts()
+{
+    if (!empty($_SESSION['success']))
+    {
+        require_once VIEWS . '/incs/alert-success.php';
+        unset($_SESSION['success']);
+    }
+    if (!empty($_SESSION['error']))
+    {
+        require_once VIEWS . '/incs/alert-error.php';
+        unset($_SESSION['error']);
+    }
+
+}

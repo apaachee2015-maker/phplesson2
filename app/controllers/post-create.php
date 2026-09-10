@@ -4,8 +4,6 @@
 use myframe\Db;
 use myframe\Validator;
 
-require_once CORE . '/classes/Validator.php';
-
 
 /**
 * @var Db $db
@@ -47,13 +45,11 @@ $validation = $validator->validate($data, $rules);
 if (!$validation->hasErrors())
 {
 
-    if ($db->query("INSERT INTO posts1 (`title`, `excerpt`, `content`) VALUES (:title, :excerpt, :content)", $data))
+    if ($db->query("INSERT INTO posts (`title1`, `excerpt`, `content`) VALUES (:title, :excerpt, :content)", $data))
     {
-
       $_SESSION['success'] = 'It is OK !';
     }else
     {
-        echo "Error";
       $_SESSION['error'] = 'DB Error !';
     }
   redirect();
