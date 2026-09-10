@@ -7,7 +7,7 @@
     <base href="<?= PATH ?>/">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/assets/main.css">
-    <link rel="icon" href="/public/img/favicon.png">
+    <link rel="icon" href="public/img/favicon.png">
 </head>
 <body>
     <div class="wrapper">
@@ -37,4 +37,6 @@
                 </div>
             </div>
         </nav>
-         </div>
+        </div>
+
+

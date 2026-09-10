@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'myfrm\\' => array($vendorDir . '/myfrm/core/classes'),
+    'myframe\\' => array($vendorDir . '/myframe/core/classes'),
 );

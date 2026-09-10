@@ -1,9 +1,16 @@
 <?php
 
+use myframe\Db;
+use myframe\Validator;
+
+session_start();
+    require __DIR__ . '/../vendor/autoload.php';
+
+
     require dirname(__DIR__) . '/config/config.php';
 
-    require CORE . '/classes/Db.php';
     require CORE . '/funcs.php';
+
 
     $db_config = require CONFIG . '/db.php';
     $db = (Db::getInstance())->getConnection($db_config);

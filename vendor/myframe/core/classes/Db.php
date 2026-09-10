@@ -1,5 +1,8 @@
 <?php
 
+namespace myframe;
+use PDO;
+use PDOStatement;
 
 class Db
 {

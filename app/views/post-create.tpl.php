@@ -1,5 +1,9 @@
 <?php
-require VIEWS . '/incs/header.php'; ?>
+require VIEWS . '/incs/header.php';
+/**
+ * @var \myframe\Validator $validation;
+ */
+?>
     <main class="main py-3">
         <div class="container">
 
@@ -16,31 +20,23 @@ require VIEWS . '/incs/header.php'; ?>
                             </label>
                             <input id="title" name="title" type="text" class="form-control" placeholder="Post title" value="<?= old('title') ?>">
 
-                            <?= isset($validatiion) ?>
+                            <?= isset($validation) ? $validation->ListErrors('title') : '' ?>
                         </div>
                         <div class="mb3">
                             <label for="excerpt" class="form-label" id="excerpt">Post Excerpt</label>
                             <textarea name="excerpt" id="excerpt" class="form-control" rows="3" placeholder="Post excerpt"><?= old('excerpt') ?></textarea>
-                            <?php if (isset($errors['excerpt'])): ?>
-                                <div class="invalid-feedback d-block">
-                                    <?= $errors['excerpt']?>
-                                </div>
-                            <?php endif;?>
+                            <?= isset($validation) ? $validation->ListErrors('excerpt') : '' ?>
                         </div>
 
                         <div class="mb3">
                             <label for="content" class="form-label" id="content">Post Content</label>
                             <textarea name="content" id="content" class="form-control" rows="5" placeholder="Post content"><?= old('content') ?></textarea>
-                            <?php if (isset($errors['content'])): ?>
-                                <div class="invalid-feedback d-block">
-                                    <?= $errors['content']?>
-                                </div>
-                            <?php endif;?>
+                            <?= isset($validation) ? $validation->ListErrors('content') : '' ?>
                         </div>
 
                         <div class="mt-4">
                             <button type="submit" class="btn btn-success">
-                                Zanesty
+                                Create
                             </button>
                         </div>
 

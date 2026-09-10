@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/public/test/app" isTestSource="false" packagePrefix="app\" />
       <sourceFolder url="file://$MODULE_DIR$/public/test/classes/test" isTestSource="false" packagePrefix="base\" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/myfrm/core/classes" isTestSource="false" packagePrefix="myfrm\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor/myframe/core/classes" isTestSource="false" packagePrefix="myframe\" />
       <excludeFolder url="file://$MODULE_DIR$/public/test/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myfrm/core" />

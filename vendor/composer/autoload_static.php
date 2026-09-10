@@ -9,14 +9,14 @@ class ComposerStaticInit69354287096b1d46a8a43bc322d3fe0d
     public static $prefixLengthsPsr4 = array (
         'm' => 
         array (
-            'myfrm\\' => 6,
+            'myframe\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'myfrm\\' => 
+        'myframe\\' => 
         array (
-            0 => __DIR__ . '/..' . '/myfrm/core/classes',
+            0 => __DIR__ . '/..' . '/myframe/core/classes',
         ),
     );
 
