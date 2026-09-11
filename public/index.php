@@ -1,6 +1,7 @@
 <?php
 
 use myframe\Db;
+use myframe\Router;
 use myframe\Validator;
 
 session_start();
@@ -17,11 +18,12 @@ session_start();
     $db2 = (Db::getInstance())->getConnection($db_config);
 
 
-    require CORE . '/router.php';
+//    require CORE . '/router.php';
 
+$router = new Router();
+require CONFIG . '/routes.php';
 
-
-
+$router->match();
 
 
 

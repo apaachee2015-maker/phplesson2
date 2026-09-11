@@ -12,7 +12,7 @@ require VIEWS . '/incs/header.php';
                 <div class="col-md-12">
                   <h1>New Post</h1>
 
-                    <form action="" method="post">
+                    <form action="/posts" method="post">
 
                         <div class="mb3">
                             <label id="title" for="title" class="form-label">

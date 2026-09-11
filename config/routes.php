@@ -1,9 +1,26 @@
 <?php
 
-$routes = [
-    '' => 'index.php',
-    'about' => 'about.php',
-    'post' => 'post.php',
-    'posts/create' => 'post-create.php',
+/**
+* @var $router;
+ * */
 
-];
+//Post
+$router->get('', 'posts/index.php');
+$router->get('posts', 'posts/show.php');
+$router->get('posts/create', 'posts/create.php');
+$router->post('posts', 'posts/store.php');
+
+$router->delete('posts', 'posts/destroy.php');
+
+$router->get('about', 'about.php');
+
+
+
+
+//$routes = [
+//    '' => 'index.php',
+//    'about' => 'about.php',
+//    'post' => 'post.php',
+//    'posts/create' => 'post-create.php',
+//
+//];

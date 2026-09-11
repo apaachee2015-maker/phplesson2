@@ -33,6 +33,7 @@ namespace myframe;
 
         protected function check($field)
         {
+
             foreach ($field['rules'] as $rule => $rule_value)
             {
                 if (in_array($rule, $this->rules_list))
