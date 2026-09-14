@@ -25,13 +25,10 @@
                             <a class="nav-link active" aria-current="page" href="/">Home-posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about">О проекте</a>
+                            <a class="nav-link" href="posts/create">New Post</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="posts/create">Add Post</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Еще что нибудь</a>
+                            <a class="nav-link disabled" aria-disabled="true">Something...</a>
                         </li>
                     </ul>
                 </div>

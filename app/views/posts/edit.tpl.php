@@ -3,6 +3,9 @@ require VIEWS . '/incs/header.php';
 /**
  * @var $post;
  */
+/**
+ * @var \myframe\Validator $validation;
+ */
 ?>
     <main class="main py-3">
         <div class="container">
