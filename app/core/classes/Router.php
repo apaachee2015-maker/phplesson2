@@ -11,7 +11,7 @@ class Router
 
     public function __construct()
     {
-        $this->method = $_SERVER['REQUEST_METHOD'];
+        $this->method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
         $this->uri = trim(parse_url($_SERVER['REQUEST_URI'])['path'], '/');
     }
 
@@ -37,6 +37,11 @@ class Router
     public function delete($uri, $controller)
     {
         $this->add($uri, $controller, 'DELETE');
+    }
+
+    public function patch($uri, $controller)
+    {
+        $this->add($uri, $controller, 'PATCH');
     }
 
     public function match()

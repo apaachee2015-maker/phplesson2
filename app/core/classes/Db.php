@@ -80,4 +80,9 @@ public function findOrFail()
     return $res;
 }
 
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
+    }
+
 }
