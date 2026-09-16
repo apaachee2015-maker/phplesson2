@@ -1,28 +1,18 @@
 <?php
 
-use myframe\Db;
-use myframe\Router;
-use myframe\Validator;
-
 session_start();
     require __DIR__ . '/../vendor/autoload.php';
-
-
     require dirname(__DIR__) . '/config/config.php';
-
+    require_once __DIR__ . '/bootstrap.php';
     require CORE . '/funcs.php';
 
+//    $s_container = \myframe\App::get(\myframe\Db::class);
+//    dump(db());
+//    dd($s_container);
 
-    $db_config = require CONFIG . '/db.php';
-    $db = (Db::getInstance())->getConnection($db_config);
-    $db2 = (Db::getInstance())->getConnection($db_config);
-
-
-//    require CORE . '/router.php';
-
-$router = new Router();
+$router = new \myframe\Router();
 require CONFIG . '/routes.php';
-
+dd($router->routes);
 $router->match();
 
 

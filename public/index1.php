@@ -1,4 +1,21 @@
 <?php
+
+$container = new \myframe\ServiceContainer();
+$container; - // instance - variable
+
+$container->service;
+$container->setService($services)
+
+$services['\myframe\Db'] = function ()
+{
+    $db_config = require CONFIG . '/db.php';
+    return (\myframe\Db::getInstance())->getConnection($db_config);
+}
+
+
+
+
+
 //
 //
 //define("ROOT", dirname(__DIR__));

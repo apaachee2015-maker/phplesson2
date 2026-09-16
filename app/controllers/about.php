@@ -1,8 +1,7 @@
 <?php
 
+$db = \myframe\App::get(\myframe\Db::class);
 
-//require CORE . '/funcs.php';
-global $db;
 $title = 'My BLog: About';
 
 $post = '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil maiores reprehenderit,

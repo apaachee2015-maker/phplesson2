@@ -1,5 +1,5 @@
 <?php
-global $db;
+$db = \myframe\App::get(\myframe\Db::class);
 
 $id = $_GET['id'] ?? 0;
 $title = trim($_POST['title'] ?? '');

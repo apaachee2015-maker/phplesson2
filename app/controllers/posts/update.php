@@ -2,7 +2,7 @@
 
 use myframe\Validator;
 
-global $db;
+$db = \myframe\App::get(\myframe\Db::class);
 
 
 $fillable = ['title', 'excerpt', 'content'];

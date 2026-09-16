@@ -1,10 +1,7 @@
 <?php
 
 
-/**
- * @var Db $db
- */
-global $db;
+$db = \myframe\App::get(\myframe\Db::class);
 
 $id = $_GET['id'] ?? 0;
 

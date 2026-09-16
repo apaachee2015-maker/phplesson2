@@ -78,3 +78,8 @@ function getalerts()
     }
 
 }
+
+function db(): \myframe\Db
+{
+    return \myframe\App::get(\myframe\Db::class);
+}
