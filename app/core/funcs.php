@@ -83,3 +83,8 @@ function db(): \myframe\Db
 {
     return \myframe\App::get(\myframe\Db::class);
 }
+
+function chekauth()
+{
+    return isset($_SESSION['user']);
+}

@@ -19,7 +19,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -30,6 +30,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="posts/create">New Post</a>
                         </li>
+
+                    </ul>
+                    <ul class="d-flex text-white align-items-center list-unstyled m-0 gap-3">
+                        <?php if (isset($_SESSION['user'])) : ?>
+                            <li><?= $_SESSION['user']['name']; ?></li>
+                            <li><a class="nav-link" href="logout">Logout</a></li>
+                            <?php else: ?>
+                            <li><a class="nav-link" href="register">Register</a></li>
+                            <li><a class="nav-link" href="login">Login</a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>

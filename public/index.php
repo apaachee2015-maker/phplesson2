@@ -12,7 +12,7 @@ session_start();
 
 $router = new \myframe\Router();
 require CONFIG . '/routes.php';
-dd($router->routes);
+//dd($router->routes);
 $router->match();
 
 
