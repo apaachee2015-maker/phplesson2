@@ -88,5 +88,9 @@ public function findOrFail()
     {
         return $this->stmt->rowCount();
     }
+    public function getColumn()
+    {
+        return $this->stmt->fetchColumn();
+    }
 
 }

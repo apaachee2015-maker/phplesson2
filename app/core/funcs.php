@@ -12,7 +12,7 @@ function dump($data)
 function p_arr($data)
 {
     echo
-    "</pre>";
+    "<pre>";
     print_r($data);
     "</pre>";
 }
