@@ -77,21 +77,6 @@ class Router
                     (new $middleware)->handle();
                 }
 
-//                if ($route['middleware'] == 'guest')
-//                {
-//                    if (chekauth())
-//                    {
-//                        redirect('/');
-//                    }
-//                }
-//
-//                if ($route['middleware'] == 'auth')
-//                {
-//                    if (!chekauth())
-//                    {
-//                        redirect('/register');
-//                    }
-//                }
 
                 require CONTROLLERS . "/{$route['controller']}";
                 $matches = true;

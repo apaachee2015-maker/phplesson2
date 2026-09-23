@@ -14,13 +14,13 @@ $per_page = 2;
 $total = $db->query("SELECT COUNT(*) FROM posts")->getColumn();
 $pagination = new  \myframe\Pagination((int)$page, $per_page, $total);
 
-p_arr($pagination);
-
-$start = $pagination->getStart();
-var_dump($start);
-
-
-die();
+//p_arr($pagination);
+//
+//$start = $pagination->getStart();
+//var_dump($start);
+//
+//
+//die();
 //  <----
 $per_page = 5;
 

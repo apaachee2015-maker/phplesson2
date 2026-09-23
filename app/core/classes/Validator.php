@@ -4,13 +4,14 @@ namespace myframe;
     class Validator
     {
         public $errors = [];
-        protected $rules_list = ['required', 'min', 'max',];
+        protected $rules_list = ['required', 'min', 'max', 'email', 'unique'];
 
         protected $messages = [
             'required' => 'The :fieldname: field is required',
             'min' => 'The :fieldname: must be a minimum :rulevalue: characters',
             'max' => 'The :fieldname: must be a maximum :rulevalue: characters',
-            'email' => 'Not valid email'
+            'email' => 'You entered Not valid email',
+            'unique' => 'The :fieldname: is already taken'
         ];
         public function validate($data = [], $rules = [])
         {
@@ -96,6 +97,17 @@ namespace myframe;
             return mb_strlen($value, 'UTF-8') <= $rule_value;
         }
 
+        protected function email($value, $rule_value)
+        {
+            return filter_var($value, FILTER_VALIDATE_EMAIL);
+        }
+
+        protected function unique($value, $rule_value)
+        {
+            $data = explode(':', $rule_value);
+            return (!db()->query("SELECT {$data[1]} FROM {$data[0]} WHERE {$data[1]} = ?", [$value])
+                ->getColumn());
+        }
 
 
     }
